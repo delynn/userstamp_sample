@@ -1,0 +1,27 @@
+<h1>Editing post</h1>
+
+<%= error_messages_for :post %>
+
+<% form_for(@post) do |f| %>
+  <p>
+    <b>Creator</b><br />
+    <%= f.text_field :creator_id %>
+  </p>
+
+  <p>
+    <b>Updater</b><br />
+    <%= f.text_field :updater_id %>
+  </p>
+
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>
